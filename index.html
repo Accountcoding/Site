@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://playentry.org/favicon-32x32.png">
-<script>
-location.replace("https://playentry.org/fonts/JalnanOTF00.woff")
-</script>
+      <link rel="stylesheet" href="http://nko.kr/style.css" type="text/css" />
+      <link rel="stylesheet" href="http://nko.kr/jquery.datetimepicker.css" type="text/css" />     
  </head>
+
+      <div style="width:380px;"> <!--크기 설정-->
+      <div id="nkoclock">
+        <span id="nkoclockdisplay">.</span>
+        <div id="nkoclockdescription"></div>
+        <div id="nkoclocktools">
+          <img id="nkoclockstopwatch" src="http://nko.kr/stopwatch.png" alt="초시계(스톱워치)">
+          <img id="nkoclockdday" src="http://nko.kr/dday.png" alt="남은/지난 시간(D-DAY)">
+          <img id="nkoclockrefresh" src="http://nko.kr/refresh.png" alt="새로고침">
+        </div>
+        <input id="nkoclockdatetimepicker" type="text">
+      </div>
+      </div>
+      <script type="text/javascript">
+        var nkoclockdescription = "원자시계"; //첫화면에 나타낼 내용
+        var nkoclockmode = "3"; //1:초시계, 2:디데이, 3:현재시간
+        var nkoclockuserinput = ""; //위에서 2를 썼을 때만 디데이 대상 일시를 UNIX TIMESTAMP 형식으로 적는 곳. 해당없으면 비워둠
+        var nkoisms = "true"; //밀리초 단위를 표시할지의 여부. true:표시, false:가림
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="http://nko.kr/jquery.datetimepicker.js" charset="utf-8"></script>
+      <script id="NKOCLOCKSCRIPT" src="http://nko.kr/nkoclock.js" charset="utf-8"></script>
 
